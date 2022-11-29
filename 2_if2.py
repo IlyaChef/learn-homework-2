@@ -14,13 +14,23 @@
   и выводя на экран результаты
 
 """
-
-def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+def main(string_1, string_2):
     
-if __name__ == "__main__":
-    main()
+    if type(string_1) != str or type(string_2) != str:
+        return 0
+    elif string_1 == string_2:
+        return 1
+    elif string_1 != string_2 and int(len(string_1)) > int(len(string_2)):
+        return 2
+    elif string_1 != string_2 and string_2 == 'learn':
+        return 3
+
+print(main(2,3))
+print(main('python', 'python'))
+print(main('learning', 'python'))
+print(main('happy', 'learn'))
+
+
+
+    
+
